@@ -3,10 +3,13 @@ from .models import Movie
 
 class MovieSerializer(serializers.ModelSerializer):
 
+
     class Meta:
         model = Movie
         fields = ('title', 'synopsis', 'status',)
 
-    def create(self, validated_data):
-        
-        return Movie.objects.create(**validated_data)
+
+#    def create(self, validated_data):
+#        print 'creating'
+#        validated_data['title'] = 'test2'
+#        return Movie.objects.create(**validated_data)

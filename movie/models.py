@@ -21,8 +21,11 @@ class Movie(models.Model):
     title = models.CharField(max_length=100, blank=False)
     status = models.SmallIntegerField(choices=STATUS,
                                       default=EXPIRED)
-    synopsis = models.TextField(max_length=1000)
+    synopsis = models.TextField(max_length=1000, blank=True)
     
     
-#    def save(self, *args):
-#        super(Movie, self).save(*args)
+#    def save(self, *args, **kwargs):
+##        print 'saving...'
+##        print args
+##        self.title = 'test3'
+#        super(Movie, self).save(*args, **kwargs)
