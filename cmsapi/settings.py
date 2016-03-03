@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'cms',
     'movie',
+    'app_utils'
 ]
 
 REST_FRAMEWORK = {
