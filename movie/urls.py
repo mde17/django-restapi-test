@@ -1,5 +1,5 @@
 from rest_framework.routers import DefaultRouter
-from . import views
+from api import movie
 
 router = DefaultRouter(trailing_slash=False)
-router.register(r'movies', views.MovieViewset)
+router.register(r'movies', movie.MovieViewset)

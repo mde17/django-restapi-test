@@ -1,16 +1,15 @@
 from rest_framework.response import Response
 from . import helpers
-import constants
 
 GENERIC = 0
 AUTH = 1
 
 def errors(t):
-    fn = helpers.renderToJson(['title', 'message',])
+    fn = helpers.renderToJson(['title', 'message','status',])
     
     responses = (
-        (GENERIC, fn(['Error', 'Error has occured'])),
-        (AUTH, fn(['Auth Error', 'Invalid Credentials'])),
+        (GENERIC, fn(['Error', 'Error has occured', 400])),
+        (AUTH, fn(['Auth Error', 'Invalid Credentials', 401])),
     )
     
     return {

@@ -2,8 +2,8 @@ from django.shortcuts import render
 
 from rest_framework import viewsets, filters, generics
 from rest_framework.response import Response
-from .serializers import MovieSerializer
-from .models import Movie
+from ..serializers import MovieSerializer
+from ..models import Movie
 from rest_framework.decorators import list_route
 from app_utils import error_handler
 
